@@ -3,4 +3,3 @@ public class Sample {
         System.out.println("Hello from Jenkins Pipeline!");
     }
 }
-
