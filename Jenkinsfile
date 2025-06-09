@@ -1,17 +1,17 @@
 node {
     stage('Checkout') {
-        // This step ensures Jenkins pulls the Git repo contents (e.g., Sample.java)
+        echo 'Checking out the code...'
         checkout scm
     }
 
     stage('Compile') {
         echo 'Compiling Sample.java...'
-        sh 'ls -l'                 // List files to confirm Sample.java is present
-        sh 'javac Sample.java'     // Compile the Java file
+        sh 'ls -l'
+        sh 'javac Sample.java'
     }
 
     stage('Run') {
-        echo 'Running Sample...'
-        sh 'java Sample'           // Run the compiled Java class
+        echo 'Running Sample.java...'
+        sh 'java Sample'
     }
 }
